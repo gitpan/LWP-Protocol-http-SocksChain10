@@ -1,10 +1,10 @@
 ########################################################################
 #
-# $Id: SocksChain10.pm,v 1.2 2005/03/10 09:09:08 gosha Exp $
+# $Id: SocksChain10.pm,v 1.3 2005/03/12 13:59:18 gosha Exp $
 #
 # Copyright (C) Igor V. Okunev gosha<at>prv.mts-nn.ru 2005
 #
-#      All rights reserved. This program is free software;
+#      All rights reserved. This library is free software;
 #      you can redistribute it and/or modify it under the
 #               same terms as Perl itself.
 #
@@ -23,7 +23,7 @@ require HTTP::Status;
 require IO::Select;
 require LWP::Protocol;
 
-($VERSION='$Revision: 1.2 $')=~s/^\S+\s+(\S+)\s+.*/$1/;
+($VERSION='$Revision: 1.3 $')=~s/^\S+\s+(\S+)\s+.*/$1/;
 
 $^W = 1;
 
@@ -324,10 +324,10 @@ LWP::Protocol::http::SocksChain10 - Speak HTTP through Net::SC
 
 LWP::Protocol::http::SocksChain10 enables you to speak HTTP through SocksChain ( Net::SC ).
 To use it you need to overwrite the implementor class of the LWP 'http' scheme.
-All 'http' URIs will now be interpreted as local sockets by LWP.
 
 The interface of LWP::Protocol::http::SocksChain10 is similar to
-LWP::Protocol::http10.
+LWP::Protocol::http10. To enable the new HTTP/1.1 protocol driver
+instead of the old HTTP/1.0 driver use LWP::Protocol::http::SocksChain.
 
 =head1 SEE ALSO
 
