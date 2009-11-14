@@ -1,6 +1,6 @@
 ########################################################################
 #
-# $Id: SocksChain10.pm,v 1.3 2005/03/12 13:59:18 gosha Exp $
+# $Id: SocksChain10.pm,v 1.5 2009-11-14 10:20:43 gosha Exp $
 #
 # Copyright (C) Igor V. Okunev gosha<at>prv.mts-nn.ru 2005
 #
@@ -23,9 +23,9 @@ require HTTP::Status;
 require IO::Select;
 require LWP::Protocol;
 
-($VERSION='$Revision: 1.3 $')=~s/^\S+\s+(\S+)\s+.*/$1/;
+($VERSION='$Revision: 1.5 $')=~s/^\S+\s+(\S+)\s+.*/$1/;
 
-$^W = 1;
+local $^W = 1;
 
 @ISA = qw(LWP::Protocol);
 
@@ -105,7 +105,7 @@ sub _fixup_header
 sub request
 {
 	my($self, $request, undef, $arg, $size, $timeout) = @_;
-	LWP::Debug::trace('()');
+	#LWP::Debug::trace('()');
 
 	$size ||= 4096;
 
