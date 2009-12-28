@@ -1,4 +1,7 @@
 
+1.7
+	Bug fixed: Undeclared dependences
+
 1.6
 	cleanup LWP::Debug ( Bug fixed: 51786 )
 
